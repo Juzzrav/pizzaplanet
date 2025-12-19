@@ -8,6 +8,7 @@ use Tests\TestCase;
 
 class CheckoutFlowTest extends TestCase
 {
+        use RefreshDatabase;
     /**
      * A basic feature test example.
      */
