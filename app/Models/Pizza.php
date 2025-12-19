@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pizza extends Model
 {
+      use HasFactory;
     protected $fillable = [
         'code','name','base_price_minor','currency','is_customizable'
     ];
