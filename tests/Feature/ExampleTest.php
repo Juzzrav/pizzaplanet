@@ -2,18 +2,20 @@
 
 namespace Tests\Feature;
 
-// use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use App\Models\Pizza;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic test example.
-     */
-    public function test_the_application_returns_a_successful_response(): void
-    {
-        $response = $this->get('/');
+    use RefreshDatabase;
 
-        $response->assertStatus(200);
+    public function test_homepage_loads(): void
+    {
+        Pizza::factory()->count(3)->create();
+
+        $this->get('/')
+            ->assertStatus(200)
+            ->assertSeeText('PizzaPlanet'); // mas safe kesa 'Pizza'
     }
 }
