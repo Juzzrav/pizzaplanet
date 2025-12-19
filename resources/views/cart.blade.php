@@ -86,8 +86,10 @@
     <h2>Subtotal: {{ $currency }} {{ number_format($subtotalMinor/100, 2) }}</h2>
   </div>
 
-  <p style="margin-top:14px;">
-    Next: gagawin natin checkout + payment mock.
-  </p>
+  <p style="margin-top:10px;">
+  <a href="{{ route('checkout.show') }}">Proceed to checkout →</a>
+</p>
+
+
 </body>
 </html>
