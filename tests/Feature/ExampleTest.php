@@ -16,6 +16,6 @@ class ExampleTest extends TestCase
 
         $this->get('/')
             ->assertStatus(200)
-            ->assertSeeText('PizzaPlanet'); // mas safe kesa 'Pizza'
+            ->assertSeeText('PizzaPlanet'); 
     }
 }
